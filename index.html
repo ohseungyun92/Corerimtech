@@ -5,21 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>코어림테크</title>
     <style>
+        /* 배경을 검은색으로 설정하고 여백을 없앱니다 */
         body, html { 
             margin: 0; 
             padding: 0; 
-            background-color: #000000; /* 이미지 배경이 검은색 계열이라 검은색이 자연스럽습니다 */
-            text-align: center;
+            background-color: #000000; 
+            overflow-x: hidden;
         }
-        img { 
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        img {
             display: block;
-            margin: 0 auto;
-            max-width: 100%; /* 가로 폭에 맞춰 크기 조절 */
-            height: auto;    /* 세로 길이는 원본 비율대로 유지 (스크롤 생성) */
+            width: 100%;
+            max-width: 100%; /* 화면 너비에 맞춤 */
+            height: auto;
+            opacity: 0; /* 처음에는 안 보이게 설정 */
+            transform: translateY(50px); /* 50px 아래에서 시작 */
+            animation: fadeInUp 1.5s ease forwards;
         }
+
+        /* 아래에서 위로 올라오며 나타나는 애니메이션 */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 1, 2, 3번 이미지가 순차적으로 나타나도록 시간 차이(지연) 부여 */
+        .img1 { animation-delay: 0.3s; }
+        .img2 { animation-delay: 1.0s; }
+        .img3 { animation-delay: 1.7s; }
     </style>
 </head>
 <body>
-    <img src="Corerim.jpg" alt="Corerim Tech">
+    <div class="container">
+        <img src="Corerim1.jpg" class="img1" alt="상단">
+        <img src="Corerim2.jpg" class="img2" alt="중단">
+        <img src="Corerim3.jpg" class="img3" alt="하단">
+    </div>
 </body>
 </html>
