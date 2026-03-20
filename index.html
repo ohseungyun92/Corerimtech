@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>코어림테크</title>
 
+    <!-- 🔥 카카오톡 썸네일 (OG 태그) -->
     <meta property="og:title" content="코어림테크">
     <meta property="og:description" content="Together for the Future of Semiconductor">
-    <meta property="og:image" content="https://ohseungyun92.github.io/Corerimtech/Corerim-04.jpg">
-    <meta property="og:url" content="https://ohseungyun92.github.io/Corerimtech/">
+    <meta property="og:image" content="https://corerimtech.com/Corerim4.jpg">
+    <meta property="og:url" content="https://corerimtech.com">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
 
     <style>
-        /* 배경을 검은색으로 설정하고 여백을 없앱니다 */
         body, html { 
             margin: 0; 
             padding: 0; 
@@ -30,12 +31,11 @@
             width: 100%;
             max-width: 100%; 
             height: auto;
-            opacity: 0; /* 처음에는 안 보이게 설정 */
-            transform: translateY(50px); /* 아래에서 시작 */
+            opacity: 0;
+            transform: translateY(50px);
             animation: fadeInUp 1.5s ease forwards;
         }
 
-        /* 아래에서 위로 올라오며 나타나는 애니메이션 */
         @keyframes fadeInUp {
             to {
                 opacity: 1;
@@ -43,12 +43,12 @@
             }
         }
 
-        /* 순차적으로 나타나도록 시간 차이 부여 */
         .img1 { animation-delay: 0.3s; }
         .img2 { animation-delay: 1.0s; }
         .img3 { animation-delay: 1.7s; }
     </style>
 </head>
+
 <body>
     <div class="container">
         <img src="Corerim-01.jpg" class="img1" alt="상단">
@@ -56,3 +56,4 @@
         <img src="Corerim-03.jpg" class="img3" alt="하단">
     </div>
 </body>
+</html>
